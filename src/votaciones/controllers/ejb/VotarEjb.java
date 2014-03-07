@@ -12,7 +12,7 @@ public class VotarEjb {
 	 */
 	public boolean votar(Voto voto) {
 		VotoDAO votoDAO = DAOFactory.getFactory().getVotoDAO();
-		Voto v = votoDAO.read(voto.getIdVoto());
+		Voto v = votoDAO.read(voto.getId());
 
 		if (v == null) {
 			votoDAO.create(voto);

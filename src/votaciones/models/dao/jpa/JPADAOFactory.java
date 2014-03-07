@@ -3,15 +3,12 @@ package votaciones.models.dao.jpa;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 
-import votaciones.models.dao.CategoryDAO;
+
 import votaciones.models.dao.DAOFactory;
-import votaciones.models.dao.ProductDAO;
-import votaciones.models.dao.ShoppingBasketDAO;
-import votaciones.models.dao.UserDAO;
-import votaciones.models.dao.UserDetailDAO;
+import votaciones.models.dao.VotoDAO;
 
 public class JPADAOFactory extends DAOFactory {
-    private static final String PERSISTENCE_UNIT = "jpa";
+    private static final String PERSISTENCE_UNIT = "VotacionesJPA";
 
     private EntityManager em;
 
@@ -27,28 +24,8 @@ public class JPADAOFactory extends DAOFactory {
     }
 
     @Override
-    public CategoryDAO getCategoryDAO() {
-        return new JPACategoryDAO();
-    }
-
-    @Override
-    public UserDAO getUserDAO() {
-        return new JPAUserDAO();
-    }
-
-    @Override
-    public UserDetailDAO getUserDetailDAO() {
-        return new JPAUserDetailDAO();
-    }
-
-    @Override
-    public ShoppingBasketDAO getShoppingBasketDAO() {
-        return new JPAShoppingBasketDAO();
-    }
-
-    @Override
-    public ProductDAO getProductDAO() {
-        return new JPAProductDAO();
+    public VotoDAO getVotoDAO() {
+        return new JPAVotoDAO();
     }
 
 }
