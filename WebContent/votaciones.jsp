@@ -22,7 +22,7 @@
 		<c:if test="${not empty votacionesB}">
 			<c:forEach var="row" items="${bean.votaciones}">
 				<tr>
-					<td><c:out value="${row.idVoto}" /></td>
+					<td><c:out value="${row.id}" /></td>
 					<td><c:out value="${row.ipCliente}" /></td>
 					<td><c:out value="${row.respVoto}" /></td>
 				</tr>
